@@ -1,0 +1,142 @@
+.dropdown-menu {
+  display: none;
+  z-index: 100;
+
+  &__btn {
+    background-color: #F4F7FB;
+    width: 40px;
+    height: 30px;
+
+    &-item {
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 3px;
+        top: 2px;
+        background: #313B59;
+        border-radius: 1px;
+        transition: all 0.3s;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 3px;
+        top: 28px;
+        background: #313B59;
+        border-radius: 1px;
+        transition: all 0.3s;
+      }
+
+      span {
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 3px;
+        top: 15px;
+        background: #313B59;
+        border-radius: 1px;
+        transition: all 0.3s;
+      }
+
+      &.active {
+
+        &::before {
+          transform: rotate(45deg);
+          top: 14px;
+          background-color: #F47A0B;
+          transition: all 0.3s;
+        }
+
+        &::after {
+          transform: rotate(-45deg);
+          top: 14px;
+          background-color: #F47A0B;
+          transition: all 0.3s;
+        }
+
+        span {
+          transform: scale(0);
+        }
+      }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    background-color: #F4F7FB;
+    position: fixed;
+    top: -200%;
+    flex-direction: column;
+    align-items: center;
+    gap: 64px;
+    width: 720px;
+    height: 100%;
+    padding-top: 56px;
+    overflow: auto;
+    box-sizing: border-box;
+    transition: all 0.5s;
+    left: 0;
+
+    &.active {
+      left: 0;
+      top: 70px;
+      transition: all 0.5s;
+    }
+  }
+
+  &__logo {
+    margin-right: 30px;
+    width: 122px;
+    height: 122px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    user-select: none;
+    list-style: none;
+    margin-right: 30px;
+    margin-bottom: 20px;
+
+    &-item {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 145%;
+      color: #313B59;
+
+      &:hover {
+        cursor: pointer;
+        color: #F47A0B;
+        transition: all 0.3s;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .dropdown-menu {
+    &__btn {
+      width: 78px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .dropdown-menu {
+    display: block;
+  }
+}
+
+@media screen and (max-height: 912px) {
+    .dropdown-menu {
+        display: block;
+    }
+}

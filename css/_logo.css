@@ -1,0 +1,5 @@
+@media screen and (max-height: 912px) {
+  .company-logo {
+    display: none;
+  }
+}

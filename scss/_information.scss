@@ -1,0 +1,121 @@
+.information {
+  background-color: #f4f7fb;
+  margin-top: 143px;
+  
+  &__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    height: 600px;
+  }
+  
+  &__split {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  &__contacts {
+    width: 50%;
+    
+    &-wrapper {
+      padding-top: 65px;
+      max-width: calc(1280px / 2);
+      margin-left: auto;
+      box-sizing: border-box;
+      padding-right: 50px;
+      padding-left: 15px;
+    }
+    
+    &-title {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 56px;
+      line-height: 120%;
+      color: #313B59;
+      text-align: left;
+      margin-bottom: 57px;
+    }
+    
+    &-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 60px;
+    }
+    
+    &-item {
+      max-width: 237px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      
+      span {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #313b59;
+        margin-bottom: 13px;
+        gap: 8px;
+      }
+    }
+    
+    &-text {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 145%;
+      color: #2D3343;
+    }
+    
+    &-email {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 145%;
+      color: #2D3343;
+      
+      &:hover {
+        color: #E27410;
+      }
+    }
+    
+    &-phone {
+      display: flex;
+      flex-direction: column;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 120%;
+      color: #2D3343;
+      margin-bottom: 16px;
+      
+      &-number {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 145%;
+        color: #2D3343;
+        
+        &:hover {
+          color: #E27410;
+        }
+      }
+    }
+  }
+  
+  &__map {
+    width: 50%;
+    
+    &-frame {
+      width: 100%;
+    }
+  }
+}
